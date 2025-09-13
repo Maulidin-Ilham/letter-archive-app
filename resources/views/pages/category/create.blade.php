@@ -4,8 +4,8 @@
 
         <!-- Page Heading -->
 
-        <h1 class="h3 mb-0 text-gray-800">Tambah Kategori</h1>
-        <p class="mb-4">Unggah surat yang telah terbit pada form ini dalam bentuk PDF.</p>
+        <h1 class="h3 mb-0 text-gray-800">Kategori Surat >> Tambah</h1>
+        <p class="mb-4">Tambah kategori surat.</p>
 
         <div class="row">
             <div class="col-xl-12">
@@ -19,12 +19,17 @@
                             @csrf
                             <div class="form-group">
                                 <label for="id">ID Kategori</label>
-                                <input type="text" class="form-control" id="id" value="(Auto)" disabled>
+                                <input type="text" class="form-control" id="id" value="{{ $latestId + 1 }}"
+                                    disabled>
                             </div>
 
                             <div class="form-group">
                                 <label for="name">Nama Kategori</label>
-                                <input type="text" class="form-control" id="name" name="name">
+                                <input type="text" class="form-control @error('name') is-invalid @enderror"
+                                    id="name" name="name">
+                                @error('name')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="form-group">

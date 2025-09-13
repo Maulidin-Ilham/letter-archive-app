@@ -31,7 +31,7 @@ class ArchiveController extends Controller
             'letter_number'   => 'required|string|max:255',
             'title'           => 'required|string',
             'category_id'     => 'required|exists:categories,id',
-            'file'            => 'nullable|file|mimes:pdf|max:2048',
+            'file'            => 'required|file|mimes:pdf|max:2048',
         ]);
 
         $filePath = null;

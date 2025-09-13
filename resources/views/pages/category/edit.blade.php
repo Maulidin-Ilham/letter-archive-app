@@ -16,14 +16,17 @@
 
                             <div class="form-group mb-3">
                                 <label for="id">ID Kategori</label>
-                                <input type="text" class="form-control" id="id" value="{{ $category->id }}"
+                                <input type="text" class="form-control " id="id" value="{{ $category->id }}"
                                     disabled>
                             </div>
 
                             <div class="form-group mb-3">
                                 <label for="name">Nama Kategori</label>
-                                <input type="text" class="form-control" id="name" name="name"
-                                    value="{{ old('name', $category->name) }}" required>
+                                <input type="text" class="form-control @error('name') is-invalid @enderror"
+                                    id="name" name="name" value="{{ old('name', $category->name) }}">
+                                @error('name')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="form-group mb-3">

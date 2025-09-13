@@ -5,8 +5,8 @@
         <!-- Page Heading -->
 
         <h1 class="h3 mb-0 text-gray-800">Arsip</h1>
-        <p class="mb-0">Berikut ini adalah surat surat yang telah terbit dan diarsipkan.</p>
-        <p class="">Klik "Lihat" pada kolom aksi untuk menampilkan surat.</p>
+        <p class="mb-2">Berikut ini adalah surat surat yang telah terbit dan diarsipkan.</p>
+
 
         <div class="row">
             <div class="col-xl-12 mb-2">
@@ -54,7 +54,7 @@
                                     @foreach ($archives as $archive)
                                         <tr>
                                             <td>{{ $archive->letter_number }}</td>
-                                            <td>{{ $archive->category->name }}</td>
+                                            <td>{{ optional($archive->category)->name ?? 'Tidak ada kategori' }}</td>
                                             <td>{{ $archive->title }}</td>
                                             <td>{{ $archive->created_at->translatedFormat('d F Y H:i') }}</td>
                                             <td>

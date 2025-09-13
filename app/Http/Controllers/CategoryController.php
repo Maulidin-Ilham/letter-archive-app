@@ -21,7 +21,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view("pages.category.create");
+        $latestId = Category::latest("id")->value("id");
+        return view("pages.category.create",compact("latestId"));
     }
 
     /**

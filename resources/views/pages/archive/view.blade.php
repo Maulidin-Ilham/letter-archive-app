@@ -3,10 +3,10 @@
     <div class="container-fluid">
 
         <h1 class="h3 mb-0 text-gray-800">Arsip Surat >> Lihat</h1>
-        <p class="mb-0">Nomor: {{ $archive->letter_number }}</p>
-        <p class="mb-0">Kategori: {{ $archive->category->name }}</p>
-        <p class="mb-0">Judul: {{ $archive->title }}</p>
-        <p class="mb-4">Waktu: {{ $archive->created_at->translatedFormat('d F Y H:i') }}</p>
+        <p class="mb-0"><strong>Nomor:</strong> {{ $archive->letter_number }}</p>
+        <p class="mb-0"><strong>Kategori:</strong> {{ optional($archive->category)->name ?? 'Tidak ada kategori' }}</p>
+        <p class="mb-0"><strong>Judul:</strong> {{ $archive->title }}</p>
+        <p class="mb-4"><strong>Waktu:</strong> {{ $archive->created_at->translatedFormat('d F Y H:i') }}</p>
 
         <div class="card shadow">
             <div class="card-body">

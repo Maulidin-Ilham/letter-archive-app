@@ -16,7 +16,10 @@ return new class extends Migration
             $table->string('letter_number');
             $table->text('title');
             $table->text('file')->nullable();
-            $table->foreignId('category_id')->constrained();
+            $table->foreignId('category_id')
+                ->nullable()
+                ->constrained()
+                ->nullOnDelete();
             $table->timestamps();
         });
     }
