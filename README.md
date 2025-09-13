@@ -64,7 +64,7 @@ Langkah terakhir jalankan program
 ```
 ## Screenshot
 
-[Halaman Arsip](https://github.com/Maulidin-Ilham/letter-archive-app/blob/a636abe1e303f374fed4258a7f47dc750f7d2c38/public/index-archive.png)
+![Halaman Arsip](assets/index-archive.png)
 
 [Halaman Tambah Arsip](https://github.com/Maulidin-Ilham/letter-archive-app/blob/a636abe1e303f374fed4258a7f47dc750f7d2c38/public/create-archive.png)
 
