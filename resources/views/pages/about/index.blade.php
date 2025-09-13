@@ -14,13 +14,27 @@
                 <!-- Basic Card Example -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Basic Card Example</h6>
+
                     </div>
                     <div class="card-body">
-                        The styling for this basic card example is created by using default Bootstrap
-                        utility classes. By using utility classes, the style of the card component can be
-                        easily modified with no need for any custom CSS!
+                        <div class="d-flex align-items-center">
+                            <!-- Image -->
+                            <div class="me-3">
+                                <img src="{{ asset('profile.jpeg') }}" alt="profile" class="rounded"
+                                    style="width: 120px; height: 150px; object-fit: cover;">
+                            </div>
+
+                            <!-- Text Info -->
+                            <div class="ml-4">
+                                <p class="mb-2">Aplikasi ini dibuat oleh:</p>
+                                <p class="mb-0"><strong>Nama:</strong> Muhammad Ilham Maulidin</p>
+                                <p class="mb-0"><strong>Prodi:</strong> Sistem Informasi Bisnis</p>
+                                <p class="mb-0"><strong>NIM:</strong> 2141762087</p>
+                                <p class="mb-0"><strong>Tanggal:</strong> 13 September 2025</p>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>

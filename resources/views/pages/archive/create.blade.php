@@ -4,7 +4,7 @@
 
         <!-- Page Heading -->
 
-        <h1 class="h3 mb-0 text-gray-800">Unggah</h1>
+        <h1 class="h3 mb-0 text-gray-800">Arsip Surat >> Unggah</h1>
         <p class="mb-4">Unggah surat yang telah terbit pada form ini dalam bentuk PDF.</p>
 
         <div class="row">
@@ -51,8 +51,8 @@
 
         <div class="row">
             <div class="col-xl-12">
-                <a href="{{ route('archives.index') }}" class="btn btn-info">
-                    Kembali
+                <a href="{{ route('archives.index') }}" class="btn btn-dark">
+                    <span><i class="fas fa-arrow-left"></i></span> Kembali
                 </a>
             </div>
         </div>

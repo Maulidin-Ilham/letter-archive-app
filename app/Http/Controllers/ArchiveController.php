@@ -35,22 +35,19 @@ class ArchiveController extends Controller
         ]);
 
         $filePath = null;
-        $originalName = null;
+
 
         if ($request->hasFile('file')) {
             // Simpan file ke storage/app/public/archives
             $filePath = $request->file('file')->store('archives', 'public');
-
-            // Simpan juga nama asli (opsional, kalau lo mau tampilkan di UI)
-            $originalName = $request->file('file')->getClientOriginalName();
         }
 
         Archive::create([
             'letter_number'  => $request->letter_number,
             'title'          => $request->title,
             'category_id'    => $request->category_id,
-            'file'           => $filePath,        // ✅ path di storage/public
-            'original_name'  => $originalName,    // opsional, butuh kolom di DB
+            'file'           => $filePath,
+
         ]);
 
         return redirect()->route("archives.index");
@@ -82,5 +79,22 @@ class ArchiveController extends Controller
         }
 
         abort(404, 'File PDF tidak ditemukan');
+    }
+
+    public function destroy($id)
+    {
+        $archive = Archive::findOrFail($id);
+
+        // Hapus file PDF dari storage kalau ada
+        if ($archive->file && Storage::disk('public')->exists($archive->file)) {
+            Storage::disk('public')->delete($archive->file);
+        }
+
+        // Hapus record di database
+        $archive->delete();
+
+
+        return redirect()->route('archives.index')
+            ->with('success', 'Arsip berhasil dihapus!');
     }
 }
