@@ -66,16 +66,16 @@ Langkah terakhir jalankan program
 
 ![Halaman Arsip](public/index-archive.png)
 
-[Halaman Tambah Arsip](https://github.com/Maulidin-Ilham/letter-archive-app/blob/a636abe1e303f374fed4258a7f47dc750f7d2c38/public/create-archive.png)
+![Halaman Tambah Arsip](public/create-archive.png)
 
-[Halaman Lihat Arsip](https://github.com/Maulidin-Ilham/letter-archive-app/blob/a636abe1e303f374fed4258a7f47dc750f7d2c38/public/view-archive.png)
+![Halaman Lihat Arsip](public/view-archive.png)
 
-[Halaman Kategori](https://github.com/Maulidin-Ilham/letter-archive-app/blob/a636abe1e303f374fed4258a7f47dc750f7d2c38/public/index-category.png)
+![Halaman Kategori](public/index-category.png)
 
-[Halaman Tambah Kategori](https://github.com/Maulidin-Ilham/letter-archive-app/blob/a636abe1e303f374fed4258a7f47dc750f7d2c38/public/create-category.png)
+![Halaman Tambah Kategori](public/create-category.png)
 
-[Halaman Edit Kategori](https://github.com/Maulidin-Ilham/letter-archive-app/blob/a636abe1e303f374fed4258a7f47dc750f7d2c38/public/edit-category.png)
+![Halaman Edit Kategori](public/edit-category.png)
 
-[Halaman About](https://github.com/Maulidin-Ilham/letter-archive-app/blob/a636abe1e303f374fed4258a7f47dc750f7d2c38/public/about.png)
+![Halaman About](public/about.png)
 
 
