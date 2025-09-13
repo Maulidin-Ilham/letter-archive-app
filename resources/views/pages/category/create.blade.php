@@ -26,7 +26,7 @@
                             <div class="form-group">
                                 <label for="name">Nama Kategori</label>
                                 <input type="text" class="form-control @error('name') is-invalid @enderror"
-                                    id="name" name="name">
+                                    id="name" name="name" placeholder="Masukkan nama kategori...">
                                 @error('name')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -34,7 +34,7 @@
 
                             <div class="form-group">
                                 <label for="detail">Keterangan</label>
-                                <textarea class="form-control" id="detail" name="detail" rows="3"></textarea>
+                                <textarea class="form-control" id="detail" name="detail" rows="3" placeholder="Masukkan detail kategori..."></textarea>
                             </div>
 
                             <div class="d-flex justify-content-end">

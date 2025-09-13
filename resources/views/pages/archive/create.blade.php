@@ -20,7 +20,8 @@
                             <div class="form-group">
                                 <label for="letter_number">Nomor Surat</label>
                                 <input type="text" class="form-control @error('letter_number') is-invalid @enderror"
-                                    id="letter_number" name="letter_number" value="{{ old('letter_number') }}">
+                                    id="letter_number" name="letter_number" value="{{ old('letter_number') }}"
+                                    placeholder="Masukkan nomor surat...">
                                 @error('letter_number')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -44,7 +45,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="title">Judul</label>
-                                <textarea class="form-control @error('title') is-invalid @enderror" id="title" name="title" rows="3">{{ old('title') }}</textarea>
+                                <textarea class="form-control @error('title') is-invalid @enderror" id="title" name="title" rows="3"
+                                    placeholder="Masukkan judul surat...">{{ old('title') }}</textarea>
                                 @error('title')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
